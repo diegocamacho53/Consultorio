@@ -295,7 +295,13 @@ namespace Consultorio.Formularios
             labelTiempoTranscurrido.Text = TimeSpan.FromSeconds(segundosTranscurridos).ToString(@"hh\:mm\:ss");
         }
 
+        private void buttonPreguntasSecretas_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
+
 
 
     }

@@ -408,7 +408,7 @@ namespace Consultorio.Formularios
             dateTimePickerFechaCita.Value = DateTime.Today;
             bloquearCampos();
             // Obtener la fecha seleccionada por el usuario
-            DateTime fechaSeleccionada = dateTimePickerFechaCita.Value;
+            DateTime fechaSeleccionada = dateTimePickerFechaCita.Value;           
 
         }
 
@@ -478,6 +478,13 @@ namespace Consultorio.Formularios
                 bool estado = Convert.ToBoolean(filaSeleccionada.Cells["Estado"].Value);
                 DateTime fechaCita = Convert.ToDateTime(filaSeleccionada.Cells["FechaCita"].Value);
 
+                // Validar si la fecha de la cita es anterior a la fecha actual
+                if (fechaCita.Date < DateTime.Now.Date)
+                {
+                    MessageBox.Show("No se puede modificar una cita de fechas anteriores.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del evento si la fecha es anterior
+                }
+
                 // Obtener la hora de la cita como string (varchar)
                 string horaCitaString = filaSeleccionada.Cells["Hora de la cita"].Value.ToString();
 
@@ -504,7 +511,6 @@ namespace Consultorio.Formularios
                 isNewRole = false;
             }
         }
-
 
         private void textBoxPago_KeyPress(object sender, KeyPressEventArgs e)
         {

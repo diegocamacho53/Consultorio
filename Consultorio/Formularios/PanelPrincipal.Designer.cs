@@ -91,7 +91,7 @@
             labelTiempoTranscurrido.Dock = DockStyle.Bottom;
             labelTiempoTranscurrido.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelTiempoTranscurrido.ForeColor = Color.LightGray;
-            labelTiempoTranscurrido.Location = new Point(0, 656);
+            labelTiempoTranscurrido.Location = new Point(0, 659);
             labelTiempoTranscurrido.Name = "labelTiempoTranscurrido";
             labelTiempoTranscurrido.Size = new Size(0, 21);
             labelTiempoTranscurrido.TabIndex = 10;
@@ -102,7 +102,7 @@
             labelUsuario.Dock = DockStyle.Bottom;
             labelUsuario.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelUsuario.ForeColor = Color.LightGray;
-            labelUsuario.Location = new Point(0, 677);
+            labelUsuario.Location = new Point(0, 680);
             labelUsuario.Name = "labelUsuario";
             labelUsuario.Size = new Size(95, 27);
             labelUsuario.TabIndex = 9;
@@ -117,7 +117,7 @@
             panelSubMenuConfiguracion.Dock = DockStyle.Top;
             panelSubMenuConfiguracion.Location = new Point(0, 539);
             panelSubMenuConfiguracion.Name = "panelSubMenuConfiguracion";
-            panelSubMenuConfiguracion.Size = new Size(229, 117);
+            panelSubMenuConfiguracion.Size = new Size(229, 120);
             panelSubMenuConfiguracion.TabIndex = 8;
             // 
             // buttonRegistrarUsuario
@@ -189,7 +189,7 @@
             buttonCerrarSesion.FlatAppearance.BorderSize = 0;
             buttonCerrarSesion.FlatStyle = FlatStyle.Flat;
             buttonCerrarSesion.ForeColor = Color.Gainsboro;
-            buttonCerrarSesion.Location = new Point(0, 704);
+            buttonCerrarSesion.Location = new Point(0, 707);
             buttonCerrarSesion.Name = "buttonCerrarSesion";
             buttonCerrarSesion.Size = new Size(229, 45);
             buttonCerrarSesion.TabIndex = 6;

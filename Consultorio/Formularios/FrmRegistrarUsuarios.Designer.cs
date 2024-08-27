@@ -51,6 +51,19 @@
             textUsuario = new TextBox();
             groupBoxVistaRoles = new GroupBox();
             dataGridViewRoles = new DataGridView();
+            tabPage1 = new TabPage();
+            splitContainer2 = new SplitContainer();
+            groupBoxPreguntaSecreta = new GroupBox();
+            checkBoxEstadoPreguntas = new CheckBox();
+            panel1 = new Panel();
+            buttonLimpiarCampos = new Button();
+            buttonHabilitarCampos = new Button();
+            buttonCargarPreguntas = new Button();
+            buttonGuardarPregunta = new Button();
+            label10 = new Label();
+            textBoxPreguntaSecreta = new TextBox();
+            groupBox2 = new GroupBox();
+            dataGridViewPreguntas = new DataGridView();
             panelClientes.SuspendLayout();
             tabControlRegistrarUsuarios.SuspendLayout();
             tabPageRegistrarUsuario.SuspendLayout();
@@ -62,6 +75,15 @@
             panelMenu.SuspendLayout();
             groupBoxVistaRoles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRoles).BeginInit();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
+            splitContainer2.Panel1.SuspendLayout();
+            splitContainer2.Panel2.SuspendLayout();
+            splitContainer2.SuspendLayout();
+            groupBoxPreguntaSecreta.SuspendLayout();
+            panel1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPreguntas).BeginInit();
             SuspendLayout();
             // 
             // panelClientes
@@ -76,6 +98,7 @@
             // tabControlRegistrarUsuarios
             // 
             tabControlRegistrarUsuarios.Controls.Add(tabPageRegistrarUsuario);
+            tabControlRegistrarUsuarios.Controls.Add(tabPage1);
             tabControlRegistrarUsuarios.Dock = DockStyle.Fill;
             tabControlRegistrarUsuarios.Location = new Point(0, 0);
             tabControlRegistrarUsuarios.Name = "tabControlRegistrarUsuarios";
@@ -148,7 +171,7 @@
             textBoxRespuestaSeceta.Name = "textBoxRespuestaSeceta";
             textBoxRespuestaSeceta.PasswordChar = '*';
             textBoxRespuestaSeceta.ReadOnly = true;
-            textBoxRespuestaSeceta.Size = new Size(164, 27);
+            textBoxRespuestaSeceta.Size = new Size(222, 27);
             textBoxRespuestaSeceta.TabIndex = 30;
             // 
             // label4
@@ -166,7 +189,7 @@
             comboBoxPreguntaSecreta.FormattingEnabled = true;
             comboBoxPreguntaSecreta.Location = new Point(185, 170);
             comboBoxPreguntaSecreta.Name = "comboBoxPreguntaSecreta";
-            comboBoxPreguntaSecreta.Size = new Size(164, 28);
+            comboBoxPreguntaSecreta.Size = new Size(222, 28);
             comboBoxPreguntaSecreta.TabIndex = 28;
             // 
             // label3
@@ -184,7 +207,7 @@
             comboBoxRoles.FormattingEnabled = true;
             comboBoxRoles.Location = new Point(185, 286);
             comboBoxRoles.Name = "comboBoxRoles";
-            comboBoxRoles.Size = new Size(164, 28);
+            comboBoxRoles.Size = new Size(222, 28);
             comboBoxRoles.TabIndex = 26;
             // 
             // label2
@@ -202,7 +225,7 @@
             textBoxContraseña.Name = "textBoxContraseña";
             textBoxContraseña.PasswordChar = '*';
             textBoxContraseña.ReadOnly = true;
-            textBoxContraseña.Size = new Size(164, 27);
+            textBoxContraseña.Size = new Size(222, 27);
             textBoxContraseña.TabIndex = 24;
             // 
             // checkBoxEstadoUsuario
@@ -297,7 +320,7 @@
             textUsuario.Location = new Point(185, 44);
             textUsuario.Name = "textUsuario";
             textUsuario.ReadOnly = true;
-            textUsuario.Size = new Size(164, 27);
+            textUsuario.Size = new Size(222, 27);
             textUsuario.TabIndex = 7;
             // 
             // groupBoxVistaRoles
@@ -325,6 +348,170 @@
             dataGridViewRoles.TabIndex = 0;
             dataGridViewRoles.CellClick += dataGridViewRoles_CellClick;
             // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(splitContainer2);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1055, 562);
+            tabPage1.TabIndex = 1;
+            tabPage1.Text = "Pregunta Secreta";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            splitContainer2.Dock = DockStyle.Fill;
+            splitContainer2.Location = new Point(3, 3);
+            splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            splitContainer2.Panel1.Controls.Add(groupBoxPreguntaSecreta);
+            // 
+            // splitContainer2.Panel2
+            // 
+            splitContainer2.Panel2.Controls.Add(groupBox2);
+            splitContainer2.Size = new Size(1049, 556);
+            splitContainer2.SplitterDistance = 527;
+            splitContainer2.TabIndex = 1;
+            // 
+            // groupBoxPreguntaSecreta
+            // 
+            groupBoxPreguntaSecreta.Controls.Add(checkBoxEstadoPreguntas);
+            groupBoxPreguntaSecreta.Controls.Add(panel1);
+            groupBoxPreguntaSecreta.Controls.Add(label10);
+            groupBoxPreguntaSecreta.Controls.Add(textBoxPreguntaSecreta);
+            groupBoxPreguntaSecreta.Dock = DockStyle.Fill;
+            groupBoxPreguntaSecreta.Location = new Point(0, 0);
+            groupBoxPreguntaSecreta.Name = "groupBoxPreguntaSecreta";
+            groupBoxPreguntaSecreta.Size = new Size(527, 556);
+            groupBoxPreguntaSecreta.TabIndex = 2;
+            groupBoxPreguntaSecreta.TabStop = false;
+            groupBoxPreguntaSecreta.UseCompatibleTextRendering = true;
+            // 
+            // checkBoxEstadoPreguntas
+            // 
+            checkBoxEstadoPreguntas.AutoSize = true;
+            checkBoxEstadoPreguntas.Enabled = false;
+            checkBoxEstadoPreguntas.Location = new Point(185, 92);
+            checkBoxEstadoPreguntas.Name = "checkBoxEstadoPreguntas";
+            checkBoxEstadoPreguntas.Size = new Size(76, 24);
+            checkBoxEstadoPreguntas.TabIndex = 23;
+            checkBoxEstadoPreguntas.Text = "Estado";
+            checkBoxEstadoPreguntas.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(buttonLimpiarCampos);
+            panel1.Controls.Add(buttonHabilitarCampos);
+            panel1.Controls.Add(buttonCargarPreguntas);
+            panel1.Controls.Add(buttonGuardarPregunta);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(3, 487);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(521, 66);
+            panel1.TabIndex = 14;
+            // 
+            // buttonLimpiarCampos
+            // 
+            buttonLimpiarCampos.AutoSize = true;
+            buttonLimpiarCampos.Dock = DockStyle.Left;
+            buttonLimpiarCampos.FlatAppearance.BorderSize = 0;
+            buttonLimpiarCampos.FlatStyle = FlatStyle.Flat;
+            buttonLimpiarCampos.Location = new Point(390, 0);
+            buttonLimpiarCampos.Name = "buttonLimpiarCampos";
+            buttonLimpiarCampos.Size = new Size(130, 66);
+            buttonLimpiarCampos.TabIndex = 4;
+            buttonLimpiarCampos.Text = "Limpiar";
+            buttonLimpiarCampos.UseVisualStyleBackColor = true;
+            buttonLimpiarCampos.Click += buttonLimpiarCampos_Click;
+            // 
+            // buttonHabilitarCampos
+            // 
+            buttonHabilitarCampos.AutoSize = true;
+            buttonHabilitarCampos.Dock = DockStyle.Left;
+            buttonHabilitarCampos.FlatAppearance.BorderSize = 0;
+            buttonHabilitarCampos.FlatStyle = FlatStyle.Flat;
+            buttonHabilitarCampos.Location = new Point(260, 0);
+            buttonHabilitarCampos.Name = "buttonHabilitarCampos";
+            buttonHabilitarCampos.Size = new Size(130, 66);
+            buttonHabilitarCampos.TabIndex = 3;
+            buttonHabilitarCampos.Text = "Habilitar";
+            buttonHabilitarCampos.UseVisualStyleBackColor = true;
+            buttonHabilitarCampos.Click += buttonHabilitarCampos_Click;
+            // 
+            // buttonCargarPreguntas
+            // 
+            buttonCargarPreguntas.AutoSize = true;
+            buttonCargarPreguntas.Dock = DockStyle.Left;
+            buttonCargarPreguntas.FlatAppearance.BorderSize = 0;
+            buttonCargarPreguntas.FlatStyle = FlatStyle.Flat;
+            buttonCargarPreguntas.Location = new Point(130, 0);
+            buttonCargarPreguntas.Name = "buttonCargarPreguntas";
+            buttonCargarPreguntas.Size = new Size(130, 66);
+            buttonCargarPreguntas.TabIndex = 2;
+            buttonCargarPreguntas.Text = "Cargar";
+            buttonCargarPreguntas.UseVisualStyleBackColor = true;
+            buttonCargarPreguntas.Click += buttonCargarPreguntas_Click;
+            // 
+            // buttonGuardarPregunta
+            // 
+            buttonGuardarPregunta.AutoSize = true;
+            buttonGuardarPregunta.Dock = DockStyle.Left;
+            buttonGuardarPregunta.FlatAppearance.BorderSize = 0;
+            buttonGuardarPregunta.FlatStyle = FlatStyle.Flat;
+            buttonGuardarPregunta.Location = new Point(0, 0);
+            buttonGuardarPregunta.Name = "buttonGuardarPregunta";
+            buttonGuardarPregunta.Size = new Size(130, 66);
+            buttonGuardarPregunta.TabIndex = 0;
+            buttonGuardarPregunta.Text = "Guardar";
+            buttonGuardarPregunta.UseVisualStyleBackColor = true;
+            buttonGuardarPregunta.Click += buttonGuardarPregunta_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(43, 51);
+            label10.Name = "label10";
+            label10.Size = new Size(119, 20);
+            label10.TabIndex = 13;
+            label10.Text = "Pregunta secreta";
+            // 
+            // textBoxPreguntaSecreta
+            // 
+            textBoxPreguntaSecreta.Location = new Point(185, 44);
+            textBoxPreguntaSecreta.Name = "textBoxPreguntaSecreta";
+            textBoxPreguntaSecreta.ReadOnly = true;
+            textBoxPreguntaSecreta.Size = new Size(164, 27);
+            textBoxPreguntaSecreta.TabIndex = 7;
+            textBoxPreguntaSecreta.TextChanged += textBoxPreguntaSecreta_TextChanged;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(dataGridViewPreguntas);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.Location = new Point(0, 0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(518, 556);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Vista";
+            // 
+            // dataGridViewPreguntas
+            // 
+            dataGridViewPreguntas.AllowUserToAddRows = false;
+            dataGridViewPreguntas.AllowUserToDeleteRows = false;
+            dataGridViewPreguntas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPreguntas.Dock = DockStyle.Fill;
+            dataGridViewPreguntas.Location = new Point(3, 23);
+            dataGridViewPreguntas.Name = "dataGridViewPreguntas";
+            dataGridViewPreguntas.ReadOnly = true;
+            dataGridViewPreguntas.RowHeadersWidth = 51;
+            dataGridViewPreguntas.Size = new Size(512, 530);
+            dataGridViewPreguntas.TabIndex = 0;
+            dataGridViewPreguntas.CellClick += dataGridViewPreguntas_CellClick;
+            // 
             // FrmRegistrarUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -347,6 +534,17 @@
             panelMenu.PerformLayout();
             groupBoxVistaRoles.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewRoles).EndInit();
+            tabPage1.ResumeLayout(false);
+            splitContainer2.Panel1.ResumeLayout(false);
+            splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
+            splitContainer2.ResumeLayout(false);
+            groupBoxPreguntaSecreta.ResumeLayout(false);
+            groupBoxPreguntaSecreta.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPreguntas).EndInit();
             ResumeLayout(false);
         }
 
@@ -375,5 +573,18 @@
         private TextBox textBoxRespuestaSeceta;
         private Label label4;
         private ComboBox comboBoxPreguntaSecreta;
+        private TabPage tabPage1;
+        private SplitContainer splitContainer2;
+        private GroupBox groupBoxPreguntaSecreta;
+        private CheckBox checkBoxEstadoPreguntas;
+        private Panel panel1;
+        private Button buttonLimpiarCampos;
+        private Button buttonHabilitarCampos;
+        private Button buttonCargarPreguntas;
+        private Button buttonGuardarPregunta;
+        private Label label10;
+        private TextBox textBoxPreguntaSecreta;
+        private GroupBox groupBox2;
+        private DataGridView dataGridViewPreguntas;
     }
 }
