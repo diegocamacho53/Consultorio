@@ -294,13 +294,13 @@ namespace Consultorio.Formularios
             // Por ejemplo, actualizar un Label con el tiempo transcurrido en formato hh:mm:ss
             labelTiempoTranscurrido.Text = TimeSpan.FromSeconds(segundosTranscurridos).ToString(@"hh\:mm\:ss");
         }
-
-        private void buttonPreguntasSecretas_Click(object sender, EventArgs e)
+        private void buttonVerFinanzas_Click(object sender, EventArgs e)
         {
-
+            OcutarPanelSub();
+            PanelHijo(new FrmFinanzasConsultorio());
         }
-
         #endregion
+
 
 
 

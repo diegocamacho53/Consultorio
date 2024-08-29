@@ -169,6 +169,7 @@ namespace Consultorio.Formularios
                     command.Parameters.AddWithValue("@IdPaciente", (int)comboBoxPacientes.SelectedValue);
                     command.Parameters.AddWithValue("@FechaCita", fechaFormateada);
                     command.Parameters.AddWithValue("@HoraCita", comboBoxHorasCitas.Text);
+                    command.Parameters.AddWithValue("@FormaPago", comboBoxFormaPago.Text);
                     command.Parameters.AddWithValue("@Estado", checkBoxEstado.Checked ? 1 : 0);
                     command.Parameters.AddWithValue("@Pago", pago);
                     command.Parameters.AddWithValue("@Total", total);

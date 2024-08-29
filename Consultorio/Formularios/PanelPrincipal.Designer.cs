@@ -237,6 +237,7 @@
             buttonVerFinanzas.Text = "Ver Finanzas";
             buttonVerFinanzas.TextAlign = ContentAlignment.MiddleLeft;
             buttonVerFinanzas.UseVisualStyleBackColor = true;
+            buttonVerFinanzas.Click += buttonVerFinanzas_Click;
             // 
             // buttonFinanzas
             // 

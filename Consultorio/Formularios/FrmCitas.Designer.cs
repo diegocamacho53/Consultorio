@@ -54,6 +54,8 @@
             buttonLimpiar = new Button();
             panelVistaCita = new Panel();
             dataGridViewAgenda = new DataGridView();
+            comboBoxFormaPago = new ComboBox();
+            label7 = new Label();
             panelRegistrarCitas.SuspendLayout();
             groupBoxAgendarCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -105,6 +107,8 @@
             // 
             // panelRegistroCitas
             // 
+            panelRegistroCitas.Controls.Add(label7);
+            panelRegistroCitas.Controls.Add(comboBoxFormaPago);
             panelRegistroCitas.Controls.Add(comboBoxHorasCitas);
             panelRegistroCitas.Controls.Add(label6);
             panelRegistroCitas.Controls.Add(checkBoxEstado);
@@ -146,7 +150,7 @@
             // checkBoxEstado
             // 
             checkBoxEstado.AutoSize = true;
-            checkBoxEstado.Location = new Point(106, 346);
+            checkBoxEstado.Location = new Point(112, 385);
             checkBoxEstado.Name = "checkBoxEstado";
             checkBoxEstado.Size = new Size(76, 24);
             checkBoxEstado.TabIndex = 28;
@@ -156,7 +160,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(139, 308);
+            label5.Location = new Point(145, 347);
             label5.Name = "label5";
             label5.Size = new Size(48, 20);
             label5.TabIndex = 27;
@@ -227,7 +231,7 @@
             // 
             // richTextBoxNotas
             // 
-            richTextBoxNotas.Location = new Point(253, 308);
+            richTextBoxNotas.Location = new Point(259, 347);
             richTextBoxNotas.MaxLength = 150;
             richTextBoxNotas.Name = "richTextBoxNotas";
             richTextBoxNotas.Size = new Size(305, 144);
@@ -354,6 +358,24 @@
             dataGridViewAgenda.TabIndex = 0;
             dataGridViewAgenda.CellClick += dataGridViewAgenda_CellClick;
             // 
+            // comboBoxFormaPago
+            // 
+            comboBoxFormaPago.FormattingEnabled = true;
+            comboBoxFormaPago.Items.AddRange(new object[] { "Transaccion", "Efectivo" });
+            comboBoxFormaPago.Location = new Point(253, 298);
+            comboBoxFormaPago.Name = "comboBoxFormaPago";
+            comboBoxFormaPago.Size = new Size(241, 28);
+            comboBoxFormaPago.TabIndex = 32;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(84, 301);
+            label7.Name = "label7";
+            label7.Size = new Size(109, 20);
+            label7.TabIndex = 33;
+            label7.Text = "Forma de Pago";
+            // 
             // FrmCitas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -407,5 +429,7 @@
         private Button buttonHabilitarCampos;
         private Button buttonLimpiar;
         private ComboBox comboBoxHorasCitas;
+        private Label label7;
+        private ComboBox comboBoxFormaPago;
     }
 }
