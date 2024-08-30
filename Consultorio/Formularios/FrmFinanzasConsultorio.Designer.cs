@@ -33,14 +33,14 @@
             tabControl1 = new TabControl();
             tabPageIngresos = new TabPage();
             label7 = new Label();
-            comboBox3 = new ComboBox();
+            comboBoxMetodoPago = new ComboBox();
             panel1 = new Panel();
             button2 = new Button();
             buttonGuardar = new Button();
             label6 = new Label();
             label5 = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxSaldo = new TextBox();
+            textBoxEspecificacion = new TextBox();
             pictureBox1 = new PictureBox();
             tabPageEgresos = new TabPage();
             panel3 = new Panel();
@@ -57,6 +57,19 @@
             button5 = new Button();
             button4 = new Button();
             tabPageGrafica = new TabPage();
+            panel5 = new Panel();
+            dateTimePickerFechaFinal = new DateTimePicker();
+            dateTimePickerFechaInicio = new DateTimePicker();
+            panel2 = new Panel();
+            labelBalance = new Label();
+            label12 = new Label();
+            labelPendientes = new Label();
+            labelEgresos = new Label();
+            labelIngresos = new Label();
+            buttonCargar = new Button();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
             dataGridViewFinanzas = new DataGridView();
             panelFinanzas.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -68,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             panel4.SuspendLayout();
             tabPageGrafica.SuspendLayout();
+            panel5.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFinanzas).BeginInit();
             SuspendLayout();
             // 
@@ -77,7 +92,7 @@
             panelFinanzas.Dock = DockStyle.Fill;
             panelFinanzas.Location = new Point(0, 0);
             panelFinanzas.Name = "panelFinanzas";
-            panelFinanzas.Size = new Size(907, 527);
+            panelFinanzas.Size = new Size(981, 638);
             panelFinanzas.TabIndex = 0;
             // 
             // tabControl1
@@ -89,23 +104,23 @@
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(907, 527);
+            tabControl1.Size = new Size(981, 638);
             tabControl1.TabIndex = 2;
             // 
             // tabPageIngresos
             // 
             tabPageIngresos.Controls.Add(label7);
-            tabPageIngresos.Controls.Add(comboBox3);
+            tabPageIngresos.Controls.Add(comboBoxMetodoPago);
             tabPageIngresos.Controls.Add(panel1);
             tabPageIngresos.Controls.Add(label6);
             tabPageIngresos.Controls.Add(label5);
-            tabPageIngresos.Controls.Add(textBox3);
-            tabPageIngresos.Controls.Add(textBox2);
+            tabPageIngresos.Controls.Add(textBoxSaldo);
+            tabPageIngresos.Controls.Add(textBoxEspecificacion);
             tabPageIngresos.Controls.Add(pictureBox1);
             tabPageIngresos.Location = new Point(4, 29);
             tabPageIngresos.Name = "tabPageIngresos";
             tabPageIngresos.Padding = new Padding(3);
-            tabPageIngresos.Size = new Size(899, 494);
+            tabPageIngresos.Size = new Size(973, 605);
             tabPageIngresos.TabIndex = 0;
             tabPageIngresos.Text = "Ingresos";
             tabPageIngresos.UseVisualStyleBackColor = true;
@@ -119,23 +134,23 @@
             label7.TabIndex = 20;
             label7.Text = "Metodo de pago";
             // 
-            // comboBox3
+            // comboBoxMetodoPago
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Transferencia", "Efectivo" });
-            comboBox3.Location = new Point(189, 214);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 19;
+            comboBoxMetodoPago.FormattingEnabled = true;
+            comboBoxMetodoPago.Items.AddRange(new object[] { "Transferencia", "Efectivo" });
+            comboBoxMetodoPago.Location = new Point(189, 214);
+            comboBoxMetodoPago.Name = "comboBoxMetodoPago";
+            comboBoxMetodoPago.Size = new Size(151, 28);
+            comboBoxMetodoPago.TabIndex = 19;
             // 
             // panel1
             // 
             panel1.Controls.Add(button2);
             panel1.Controls.Add(buttonGuardar);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(3, 449);
+            panel1.Location = new Point(3, 560);
             panel1.Name = "panel1";
-            panel1.Size = new Size(381, 42);
+            panel1.Size = new Size(455, 42);
             panel1.TabIndex = 18;
             // 
             // button2
@@ -161,6 +176,7 @@
             buttonGuardar.TabIndex = 0;
             buttonGuardar.Text = "Guardar";
             buttonGuardar.UseVisualStyleBackColor = true;
+            buttonGuardar.Click += buttonGuardar_Click;
             // 
             // label6
             // 
@@ -180,27 +196,27 @@
             label5.TabIndex = 16;
             label5.Text = "Especificacion";
             // 
-            // textBox3
+            // textBoxSaldo
             // 
-            textBox3.Location = new Point(189, 151);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(151, 27);
-            textBox3.TabIndex = 15;
+            textBoxSaldo.Location = new Point(189, 151);
+            textBoxSaldo.Name = "textBoxSaldo";
+            textBoxSaldo.Size = new Size(151, 27);
+            textBoxSaldo.TabIndex = 15;
             // 
-            // textBox2
+            // textBoxEspecificacion
             // 
-            textBox2.Location = new Point(189, 76);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(151, 27);
-            textBox2.TabIndex = 14;
+            textBoxEspecificacion.Location = new Point(189, 76);
+            textBoxEspecificacion.Name = "textBoxEspecificacion";
+            textBoxEspecificacion.Size = new Size(151, 27);
+            textBoxEspecificacion.TabIndex = 14;
             // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(384, 3);
+            pictureBox1.Location = new Point(458, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(512, 488);
+            pictureBox1.Size = new Size(512, 599);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
@@ -211,7 +227,7 @@
             tabPageEgresos.Location = new Point(4, 29);
             tabPageEgresos.Name = "tabPageEgresos";
             tabPageEgresos.Padding = new Padding(3);
-            tabPageEgresos.Size = new Size(899, 494);
+            tabPageEgresos.Size = new Size(973, 605);
             tabPageEgresos.TabIndex = 1;
             tabPageEgresos.Text = "Egresos";
             tabPageEgresos.UseVisualStyleBackColor = true;
@@ -231,16 +247,16 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(893, 488);
+            panel3.Size = new Size(967, 599);
             panel3.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Dock = DockStyle.Right;
             pictureBoxLogo.Image = (Image)resources.GetObject("pictureBoxLogo.Image");
-            pictureBoxLogo.Location = new Point(381, 0);
+            pictureBoxLogo.Location = new Point(455, 0);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(512, 448);
+            pictureBoxLogo.Size = new Size(512, 559);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBoxLogo.TabIndex = 12;
             pictureBoxLogo.TabStop = false;
@@ -318,9 +334,9 @@
             panel4.Controls.Add(button5);
             panel4.Controls.Add(button4);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 448);
+            panel4.Location = new Point(0, 559);
             panel4.Name = "panel4";
-            panel4.Size = new Size(893, 40);
+            panel4.Size = new Size(967, 40);
             panel4.TabIndex = 0;
             // 
             // button5
@@ -349,13 +365,153 @@
             // 
             // tabPageGrafica
             // 
+            tabPageGrafica.Controls.Add(panel5);
+            tabPageGrafica.Controls.Add(panel2);
             tabPageGrafica.Controls.Add(dataGridViewFinanzas);
             tabPageGrafica.Location = new Point(4, 29);
             tabPageGrafica.Name = "tabPageGrafica";
-            tabPageGrafica.Size = new Size(899, 494);
+            tabPageGrafica.Size = new Size(973, 605);
             tabPageGrafica.TabIndex = 2;
             tabPageGrafica.Text = "Visualizar Finanzas";
             tabPageGrafica.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = SystemColors.Info;
+            panel5.Controls.Add(dateTimePickerFechaFinal);
+            panel5.Controls.Add(dateTimePickerFechaInicio);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 524);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(702, 81);
+            panel5.TabIndex = 2;
+            // 
+            // dateTimePickerFechaFinal
+            // 
+            dateTimePickerFechaFinal.CustomFormat = "";
+            dateTimePickerFechaFinal.Format = DateTimePickerFormat.Custom;
+            dateTimePickerFechaFinal.Location = new Point(223, 30);
+            dateTimePickerFechaFinal.Name = "dateTimePickerFechaFinal";
+            dateTimePickerFechaFinal.Size = new Size(110, 27);
+            dateTimePickerFechaFinal.TabIndex = 22;
+            dateTimePickerFechaFinal.Value = new DateTime(2024, 7, 4, 0, 0, 0, 0);
+            // 
+            // dateTimePickerFechaInicio
+            // 
+            dateTimePickerFechaInicio.CustomFormat = "";
+            dateTimePickerFechaInicio.Format = DateTimePickerFormat.Custom;
+            dateTimePickerFechaInicio.Location = new Point(52, 30);
+            dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
+            dateTimePickerFechaInicio.Size = new Size(110, 27);
+            dateTimePickerFechaInicio.TabIndex = 21;
+            dateTimePickerFechaInicio.Value = new DateTime(2024, 7, 4, 0, 0, 0, 0);
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.Info;
+            panel2.Controls.Add(labelBalance);
+            panel2.Controls.Add(label12);
+            panel2.Controls.Add(labelPendientes);
+            panel2.Controls.Add(labelEgresos);
+            panel2.Controls.Add(labelIngresos);
+            panel2.Controls.Add(buttonCargar);
+            panel2.Controls.Add(label10);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(label8);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(702, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(271, 605);
+            panel2.TabIndex = 1;
+            // 
+            // labelBalance
+            // 
+            labelBalance.AutoSize = true;
+            labelBalance.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelBalance.ForeColor = Color.Khaki;
+            labelBalance.Location = new Point(27, 482);
+            labelBalance.Name = "labelBalance";
+            labelBalance.Size = new Size(0, 20);
+            labelBalance.TabIndex = 8;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(27, 417);
+            label12.Name = "label12";
+            label12.Size = new Size(116, 20);
+            label12.TabIndex = 7;
+            label12.Text = "Balance General";
+            // 
+            // labelPendientes
+            // 
+            labelPendientes.AutoSize = true;
+            labelPendientes.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelPendientes.ForeColor = Color.Khaki;
+            labelPendientes.Location = new Point(27, 352);
+            labelPendientes.Name = "labelPendientes";
+            labelPendientes.Size = new Size(0, 20);
+            labelPendientes.TabIndex = 6;
+            // 
+            // labelEgresos
+            // 
+            labelEgresos.AutoSize = true;
+            labelEgresos.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelEgresos.ForeColor = Color.Red;
+            labelEgresos.Location = new Point(27, 222);
+            labelEgresos.Name = "labelEgresos";
+            labelEgresos.Size = new Size(0, 20);
+            labelEgresos.TabIndex = 5;
+            // 
+            // labelIngresos
+            // 
+            labelIngresos.AutoSize = true;
+            labelIngresos.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelIngresos.ForeColor = Color.Lime;
+            labelIngresos.Location = new Point(27, 92);
+            labelIngresos.Name = "labelIngresos";
+            labelIngresos.Size = new Size(0, 20);
+            labelIngresos.TabIndex = 4;
+            // 
+            // buttonCargar
+            // 
+            buttonCargar.Dock = DockStyle.Bottom;
+            buttonCargar.FlatAppearance.BorderSize = 0;
+            buttonCargar.FlatStyle = FlatStyle.Flat;
+            buttonCargar.Location = new Point(0, 554);
+            buttonCargar.Name = "buttonCargar";
+            buttonCargar.Size = new Size(271, 51);
+            buttonCargar.TabIndex = 3;
+            buttonCargar.Text = "Cargar";
+            buttonCargar.UseVisualStyleBackColor = true;
+            buttonCargar.Click += buttonCargar_Click_1;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(27, 287);
+            label10.Name = "label10";
+            label10.Size = new Size(74, 20);
+            label10.TabIndex = 2;
+            label10.Text = "Pendiente";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(27, 157);
+            label9.Name = "label9";
+            label9.Size = new Size(60, 20);
+            label9.TabIndex = 1;
+            label9.Text = "Egresos";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(27, 27);
+            label8.Name = "label8";
+            label8.Size = new Size(64, 20);
+            label8.TabIndex = 0;
+            label8.Text = "Ingresos";
             // 
             // dataGridViewFinanzas
             // 
@@ -367,14 +523,14 @@
             dataGridViewFinanzas.Name = "dataGridViewFinanzas";
             dataGridViewFinanzas.ReadOnly = true;
             dataGridViewFinanzas.RowHeadersWidth = 51;
-            dataGridViewFinanzas.Size = new Size(899, 494);
+            dataGridViewFinanzas.Size = new Size(973, 605);
             dataGridViewFinanzas.TabIndex = 0;
             // 
             // FrmFinanzasConsultorio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(907, 527);
+            ClientSize = new Size(981, 638);
             Controls.Add(panelFinanzas);
             Name = "FrmFinanzasConsultorio";
             Text = "Finanzas";
@@ -391,6 +547,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             panel4.ResumeLayout(false);
             tabPageGrafica.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFinanzas).EndInit();
             ResumeLayout(false);
         }
@@ -416,15 +575,28 @@
         private Panel panel4;
         private Button button5;
         private Button button4;
-        private TextBox textBox2;
+        private TextBox textBoxEspecificacion;
         private Label label6;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox textBoxSaldo;
         private Panel panel1;
         private Button button2;
         private Button buttonGuardar;
         private Label label7;
-        private ComboBox comboBox3;
+        private ComboBox comboBoxMetodoPago;
         private DataGridView dataGridViewFinanzas;
+        private Panel panel2;
+        private Label labelPendientes;
+        private Label labelEgresos;
+        private Label labelIngresos;
+        private Button buttonCargar;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label labelBalance;
+        private Label label12;
+        private Panel panel5;
+        private DateTimePicker dateTimePickerFechaFinal;
+        private DateTimePicker dateTimePickerFechaInicio;
     }
 }

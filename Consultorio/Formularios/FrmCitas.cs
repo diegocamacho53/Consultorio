@@ -185,6 +185,7 @@ namespace Consultorio.Formularios
                     // Si no hay excepción, mostrar mensaje de confirmación
                     MessageBox.Show($"La información ha sido guardada correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Operacion = true;
+
                 }
             }
             catch (SqlException sqlEx)
@@ -327,6 +328,7 @@ namespace Consultorio.Formularios
             textBoxPago.ReadOnly = true;
             richTextBoxNotas.ReadOnly = true;
             checkBoxEstado.Enabled = false;
+            comboBoxFormaPago.Enabled = false;
         }
 
         private void habilitarCampo()
@@ -337,6 +339,7 @@ namespace Consultorio.Formularios
             textBoxValorTotal.ReadOnly = false;
             textBoxPago.ReadOnly = false;
             richTextBoxNotas.ReadOnly = false;
+            comboBoxFormaPago.Enabled = true;
             checkBoxEstado.Enabled = true;
         }
 
@@ -352,6 +355,9 @@ namespace Consultorio.Formularios
             comboBoxPacientes.Items.Clear();      // Limpia los items actuales
             comboBoxPacientes.Items.Add("-Seleccione un paciente-");  // Agrega el elemento predeterminado
             comboBoxPacientes.SelectedIndex = 0;
+            comboBoxFormaPago.Items.Clear();
+
+            
         }
 
         public void limpiarCamposConTabla()
@@ -426,6 +432,9 @@ namespace Consultorio.Formularios
                     CargarCitas();
                     bloquearCampos();
                     limpiarCampos();
+                    LlenarComboBoxPacientes();
+                    comboBoxFormaPago.Items.Add("Transaccion");
+                    comboBoxFormaPago.Items.Add("Efectivo");
                 }
                 else
                 {
@@ -433,6 +442,10 @@ namespace Consultorio.Formularios
                     CargarCitas();
                     bloquearCampos();
                     limpiarCampos();
+                    LlenarComboBoxPacientes();
+                    comboBoxFormaPago.Items.Add("Transaccion");
+                    comboBoxFormaPago.Items.Add("Efectivo");
+
                 }
             }
             catch (Exception ex)
